@@ -33,8 +33,8 @@ function NavItem (props) {
             </NavLink>
           </li>
           <li>
-            <NavLink className="link" to="/signin">
-              <div className="nav-item">signin</div>
+            <NavLink className="link" to="/signup">
+              <div className="nav-item">signup</div>
             </NavLink>
           </li>
         </ul>
