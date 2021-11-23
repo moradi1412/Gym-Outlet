@@ -1,11 +1,15 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import Logo from '../../assets/img/Logo.jpg'
 
 function NavItem (props) {
   return (
     <div>
       <Navbar>
+      <NavLink to="/home">
+      <img className='logo' src={Logo} alt='logo' />
+      </NavLink>
         <ul>
           <li>
             <NavLink className="link" to="/home">
