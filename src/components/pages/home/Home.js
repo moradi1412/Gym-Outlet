@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button } from './button';
-
-
+import Cards from './cards'
 
 function Home() {
     return (
+        <>
         <div className='hero-container'>
            <h1>TRAIN IN STYLE</h1>
            <p>Shop the collection</p>
@@ -18,13 +18,16 @@ function Home() {
                </Button>
                <Button 
                className='btns'
-               buttonsStyle='btn--outline'
+               buttonsStyle='btn--primary'
                buttonSize='btn--large'
                >
                 Women  
                </Button>
            </div>
         </div>
+
+        <Cards />
+        </>
     );
 }
 
