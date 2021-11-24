@@ -76,11 +76,14 @@ a {
   font-size: 20px;
   justify-content: end;
   margin-top: 10px;
+  padding: 10px ;
 }
 
 nav {
   justify-content: center;
-  margin-left: 400px;
+  text-align: center;
+  font-size: 30px;
+  margin-left: 250px;
 }
 
 .hero-container {
@@ -95,17 +98,269 @@ nav {
    object-fit: contain;
  }
 
+ .hero-container > h1 {
+  color: #fff;
+  font-size: 100px;
+  margin-top: -100px;
+}
+
+.hero-container > p {
+  margin-top: 8px;
+  color: #fff;
+  font-size: 32px;
+}
+
+.hero-btns {
+  margin-top: 32px;
+}
+
+.hero-btns .btn {
+  margin: 6px;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn:hover {
+  background: #fff;
+  color:#242424;
+  transition: all 0.3s ease-out;
+}
+
+.cards {
+  padding: 2rem 4rem;
+  background:var(--primary);
+}
+
+.cards > h1 {
+  text-align:center;
+  color: white;
+}
+
+.cards__container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  max-width: 1120px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cards__wrapper {
+  position: relative;
+  margin: 50px 0 45px;
+}
+
+.cards__items {
+  margin-bottom: 24px;
+}
+
+.cards__item {
+  display: flex;
+  flex: 1;
+  margin: 0 1rem;
+  border-radius: 10px;
+}
+
+.cards__item__link {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fafafa;
+}
+
+.cards__item__pic-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 67%;
+  overflow: hidden;
+}
+
+.fade-img {
+  animation-name: fade-img;
+  animation-duration: 2s;
+}
+
+.cards__item__pic-wrap::after {
+  content: attr(data-category);
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+  padding: 6px 8px;
+  max-width: calc((100%) - 60px);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--secondary); 
+  background-color:#242424cb;
+  box-sizing: border-box;
+}
+
+.cards__item__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  justify-content: center;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transition: all 0.2s linear
+  
+}
+
+.cards__item__img:hover {
+  transform: scale(1.1);
+}
+
+.cards__item__info {
+  padding: 20px 30px 30px;
+}
+
+.cards__item__text {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.about-header { 
+text-align: center;
+color: #fafafa;
+background-color: var(--secondary);
+padding: 10px;
+width: 50%;
+margin-left: 300px;
+border-radius: 25px;
+}
+
+.about-img {
+  margin-left: 400px;
+}
+
+.about-company {
+  background-color: #232F3E;
+}
+
+.about-text {
+  text-align: center;
+  padding: 10px;
+  font-size: 22px;
+  color: #fafafa;
+}
+
+.contactContainer { 
+ padding: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flexbox;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  height: 750px;
+  background-color: #022D4E;
+  color: #fafafa;
+}
+
+.h1tag {
+  padding: 20px;
+  background-color: var(--secondary);
+  width: 40%;
+  margin-left: 450px;
+  border-radius: 30px;
+  font-size: 35px;
+}
+
+.contactLines {
+  text-align: center;
+  font-size: 30px;
+  margin-left: 450px;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+}
+
+.btnContainer {
+align-content: center;
+height: 35px;
+text-align: center;
+}
+
+.btnContact {
+height: 35px;
+width: 300px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .content__blog__container {
+    width: 84%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cards__items {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cards__item {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .hero-container > h1 {
+    font-size: 70px;
+    margin-top: -150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container > h1 {
+    font-size: 50px;
+    margin-top: -100px;
+  }
+
+  .hero-container > p {
+  font-size: 30px;
+  }
+
+  .btn-mobile {
+  display: block;
+  text-decoration: none;  
+  }
+
+  .btn {
+  width: 100%;
+  }
+}
+
 a:hover {
   text-decoration: underline;
 }
 
 header {
-  background: var(--primary);
+  background: #022D4E ;
 }
 
 .Logo { 
-  width: 50px;
-
+  width: 250px;
 }
 
 header a {

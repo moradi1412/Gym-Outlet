@@ -2,10 +2,10 @@
   position: fixed;
   top: 0;
   right: 0;
-  min-width: 20%;
+  min-width: 40%;
   max-width: 30%;
   max-height: 60%;
-  background-color: var(--light);
+  background-color:beige;
   overflow: auto;
   padding: .5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
