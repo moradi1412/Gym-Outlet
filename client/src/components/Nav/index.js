@@ -1,50 +1,79 @@
 import React from "react";
-import { Navbar } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
-import Logo from '../../assets/img/Logo.jpg'
+import Auth from "../../utils/auth";
+import { Link } from "react-router-dom";
+import Logo from '../../assets/Logo.jpg';
 
-function NavItem (props) {
-  return (
-    <div>
-      <Navbar>
-      <NavLink to="/home">
-      <img className='logo' src={Logo} alt='logo' />
-      </NavLink>
-        <ul>
-          <li>
-            <NavLink className="link" to="/home">
-              <div className="nav-item" >home</div>
-            </NavLink>
+function Nav() {
+
+  function showNavigation() {
+    if (Auth.loggedIn()) {
+      return (
+        <ul className="flex-row">
+          <li className="mx-1">
+            <Link to="/orderHistory">
+              Order History
+            </Link>
           </li>
-          <li>
-            <NavLink className="link"  to="/men">
-              <div  className="nav-item">men</div>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className="link" to="/women">
-              <div  className="nav-item">women</div>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className="link" to="/about">
-              <div className="nav-item">about</div>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className="link" to="/contact">
-              <div className="nav-item">contact</div>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className="link" to="/signup">
-              <div className="nav-item">signup</div>
-            </NavLink>
+          <li className="mx-1">
+            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
+            <a href="/" onClick={() => Auth.logout()}>
+              Logout
+            </a>
           </li>
         </ul>
-      </Navbar>
-    </div>
+      );
+    } else {
+      return (
+        <ul className="flex-row">
+          
+          <li className="mx-1">
+            <Link to="/home">
+              Home
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/product">
+              Product
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/about">
+              About
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/contact">
+              Contact
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/signup">
+              Signup
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/login">
+              Login
+            </Link>
+          </li>
+        </ul>
+      );
+    }
+  }
+
+  return (
+    <header className="flex-row px-1">
+      <h1>
+        <Link to="/">
+          <img className="Logo" src= {Logo} alt='Logo'/>
+        </Link>
+      </h1>
+
+      <nav>
+        {showNavigation()}
+      </nav>
+    </header>
   );
 }
 
-export default NavItem;
+export default Nav;

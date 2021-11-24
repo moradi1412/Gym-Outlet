@@ -1,5 +1,5 @@
 {
-  "name": "gym-outlet",
+  "name": "mern-shopping",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -18,6 +18,5 @@
   },
   "devDependencies": {
     "concurrently": "^6.4.0"
-    
   }
 }
