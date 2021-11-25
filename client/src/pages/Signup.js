@@ -13,7 +13,7 @@ function Signup(props) {
     const mutationResponse = await addUser({
       variables: {
         email: formState.email, password: formState.password,
-        // firstName: formState.firstName, lastName: formState.lastName
+        firstName: formState.firstName, lastName: formState.lastName
       }
     });
     const token = mutationResponse.data.addUser.token;
@@ -29,7 +29,7 @@ function Signup(props) {
   };
 
   return (
-    <div className="container my-1">
+    <div className="container my-1 sign-up">
       <Link to="/login">
         ← Go to Login
       </Link>
