@@ -41,6 +41,7 @@ function ContactForm() {
 
     return (
         <section className="contactContainer">
+            <div>
             <h1 className="h1tag" data-testid="h1tag">Contact me</h1>
             <form id="contact-form" onSubmit={handleSubmit}>
                 <div className="contactLines">
@@ -79,6 +80,7 @@ function ContactForm() {
                     <button className='btnContact' data-testid="submit" type="submit">Submit</button>
                 </div>
             </form>
+            </div>
 
             <div className='address'>
                 <iframe title='map'
