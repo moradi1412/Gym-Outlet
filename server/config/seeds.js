@@ -104,6 +104,18 @@ db.once('open', async () => {
     ]
   });
 
+  await User.create({
+    firstName: 'a',
+    lastName: 'House',
+    email: 'a@test.com',
+    password: '123456',
+    orders: [
+      {
+        products: []
+      }
+    ]
+  });
+
   console.log('users seeded');
 
   process.exit();
