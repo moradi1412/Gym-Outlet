@@ -26,6 +26,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
   color: var(--dark);
+
 }
 
 h1,
@@ -159,6 +160,17 @@ nav {
   flex: 1;
   margin: 0 1rem;
   border-radius: 10px;
+}
+
+.sign-up {
+   height: 85%;
+} 
+
+.sign-up h2 { 
+background-color: var(--secondary);
+text-align: center;
+width: 40%;
+border-radius: 25px;
 }
 
 .cards__item__link {
