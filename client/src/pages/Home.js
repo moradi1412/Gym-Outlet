@@ -25,8 +25,10 @@ function Home() {
                </Button>
            </div>
         </div>
-
+        <div className="homeCard">
         <Cards />
+        </div>
+        
         </>
     );
 }
