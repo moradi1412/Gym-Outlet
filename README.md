@@ -9,7 +9,7 @@ Link to deployed application:
 
 ## User Story
 ```
-AS a user I WANT to shop on a  website that is easy to use,  secure,  and appealing 
+AS a user I WANT to shop on a  website that is easy to use and secure
 SO THAT I can safely purchase products.
 
 ```
