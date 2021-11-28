@@ -39,3 +39,7 @@ SO THAT I can safely purchase products.
 * Maria Cowdrey
 * Raymond Walker
 * Irvin Chao
+
+# Links 
+ https://gym-outlet.herokuapp.com/
+ https://github.com/moradi1412/gym-outlet
